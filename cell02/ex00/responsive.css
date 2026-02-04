@@ -1,0 +1,30 @@
+/* 1. ล้างค่า Margin/Padding ของ Browser */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* 2. กำหนดให้ตารางมีความสูงและกว้าง 100% */
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; 
+}
+
+td {
+    text-align: center;
+    padding: 10px;
+    word-wrap: break-word; 
+}
+
+/* 3. สร้าง Class สำหรับสีพื้นหลัง */
+.bg-green {
+    background-color: #b8c480;
+}
+
+.bg-pink {
+    background-color: #f4b4a0;
+}

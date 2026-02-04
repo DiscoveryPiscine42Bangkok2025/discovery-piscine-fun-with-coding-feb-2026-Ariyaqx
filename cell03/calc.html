@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Calculator</title>
+</head>
+<body>
+
+  <input type="text" id="left" placeholder="Left value">
+
+  <select id="operator">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    <option value="%">%</option>
+  </select>
+
+  <input type="text" id="right" placeholder="Right value">
+
+  <input type="submit" value="Try me!" id="submit">
+
+  <!-- jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+
+      // alert every 30 seconds
+      setInterval(function () {
+        alert('Please, use me...');
+      }, 30000);
+
+      $("#submit").click(function () {
+
+        const leftValue = $("#left").val();
+        const rightValue = $("#right").val();
+        const operator = $("#operator").val();
+
+        // check positive integers only (>= 0)
+        if (!/^\d+$/.test(leftValue) || !/^\d+$/.test(rightValue)) {
+          alert('Error :(');
+          return;
+        }
+
+        const left = parseInt(leftValue, 10);
+        const right = parseInt(rightValue, 10);
+        let result;
+
+        // division or modulo by zero
+        if ((operator === '/' || operator === '%') && right === 0) {
+          alert("It’s over 9000!");
+          console.log("It’s over 9000!");
+          return;
+        }
+
+        // calculation
+        switch (operator) {
+          case '+':
+            result = left + right;
+            break;
+          case '-':
+            result = left - right;
+            break;
+          case '*':
+            result = left * right;
+            break;
+          case '/':
+            result = left / right;
+            break;
+          case '%':
+            result = left % right;
+            break;
+        }
+
+        alert(result);
+        console.log(result);
+      });
+
+    });
+  </script>
+
+</body>
+</html>

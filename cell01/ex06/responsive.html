@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>responsive</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <style>
+        /* 1. ล้างค่า Margin/Padding ของ Browser เพื่อให้ตารางชิดขอบจอจริงๆ */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        /* 2. กำหนดให้ตารางมีความสูงและกว้าง 100% ของหน้าจอ */
+        table {
+            width: 100%;
+            height: 100%; /* สั่งให้ยืดเต็มความสูง */
+            border-collapse: collapse;
+            /* table-layout: fixed ช่วยให้ cell แบ่งขนาดเท่ากันและย่อหดได้ดีขึ้น */
+            table-layout: fixed; 
+        }
+
+        td {
+            text-align: center;
+            padding: 10px;
+            /* ป้องกันข้อความยาวๆ ดันตารางจนเสียทรง (ให้ตัดคำลงบรรทัดใหม่) */
+            word-wrap: break-word; 
+        }
+    </style>
+</head>
+<body>
+
+    <table border="1">
+        <tr>
+            <td style="background-color: #b8c480;">
+                First cell
+            </td>
+
+            <td style="background-color: #f4b4a0;">
+                Second cell
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
