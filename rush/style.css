@@ -1,0 +1,53 @@
+/* ===== Base สำหรับหน้า Portfolio ===== */
+body {
+    padding-top: 80px; /* กัน Navbar ทับเนื้อหา */
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+}
+
+.custom-navbar {
+    background-color: #dfded8 !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: 800 !important;
+    color: #000 !important;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* ตกแต่ง Skill & Project */
+.col-md-4 {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    margin: 10px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+#contact a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0 10px;
+    font-weight: 500;
+}
